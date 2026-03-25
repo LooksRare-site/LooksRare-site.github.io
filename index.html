@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LooksRare NFT — Fees, Rewards, Risks Explained</title>
+  <meta name="description" content="LooksRare NFT explained: learn how the marketplace works, trading fees, rewards, royalties, and key risks before you buy or sell on Ethereum.">
+  <link rel="canonical" href="https://looksrare.github.io/">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta property="og:title" content="LooksRare NFT — Fees, Rewards, Risks Explained">
+  <meta property="og:description" content="LooksRare NFT explained: learn how the marketplace works, trading fees, rewards, royalties, and key risks before you buy or sell on Ethereum.">
+  <meta property="og:url" content="https://looksrare.github.io/">
+  <meta property="og:type" content="article">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "name": "LooksRare NFT — Fees, Rewards, Risks Explained", "description": "LooksRare NFT explained: learn how the marketplace works, trading fees, rewards, royalties, and key risks before you buy or sell on Ethereum.", "url": "https://looksrare.github.io/", "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://"}, {"@type": "ListItem", "position": 2, "name": "LooksRare NFT — Fees, Rewards, Risks Explained"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is LooksRare NFT?", "acceptedAnswer": {"@type": "Answer", "text": "LooksRare NFT usually refers to NFTs traded on LooksRare, an Ethereum-based NFT marketplace launched as an alternative to OpenSea. It lets users buy, sell, and list NFTs, earn platform rewards through the LOOKS token, and interact with collections using connected crypto wallets."}}, {"@type": "Question", "name": "Is LooksRare only for Ethereum NFTs?", "acceptedAnswer": {"@type": "Answer", "text": "LooksRare is primarily associated with Ethereum NFT trading, including common standards such as ERC-721 tokens and some ERC-1155 tokens. That means users need an Ethereum-compatible wallet and should expect Ethereum gas fees when approvals or settlement are required."}}, {"@type": "Question", "name": "How much does it cost to sell on LooksRare?", "acceptedAnswer": {"@type": "Answer", "text": "The marketplace has generally used a 2% seller fee, but your real cost can be higher once you include creator royalties where applicable and Ethereum gas fees. Sellers should compare all-in cost, not just the headline fee, before listing NFTs."}}, {"@type": "Question", "name": "Why is wash trading mentioned so often with LooksRare?", "acceptedAnswer": {"@type": "Answer", "text": "Wash trading became a frequent talking point because token rewards can create incentives to generate volume that does not reflect genuine market demand. A better read comes from checking unique participants, collection quality, and token data such as <a href=\"https://www.coingecko.com/en/coins/looksrare\">LOOKS on CoinGecko</a>, not just raw marketplace volume."}}, {"@type": "Question", "name": "Do I need WETH to buy NFTs on LooksRare?", "acceptedAnswer": {"@type": "Answer", "text": "Not always, but many bid and offer workflows use WETH because smart contracts can pull it when an order executes. If you plan to place collection offers rather than only accept fixed-price asks, holding WETH is often more practical."}}, {"@type": "Question", "name": "Is LooksRare safe to use?", "acceptedAnswer": {"@type": "Answer", "text": "The platform itself uses smart contracts and wallet-based trading, but user safety still depends heavily on wallet hygiene, collection verification, and approval discipline. If you are unsure how NFT markets work, Investopedia's overview of <a href=\"https://www.investopedia.com/non-fungible-tokens-nft-5115211\">non-fungible tokens</a> is a useful refresher before trading."}}]}]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ═══ BASE THEME — Component Framework ═══ */
+/* All components use these CSS variables. */
+/* Theme presets override specific values.  */
+/* Assembler injects --primary from AI.     */
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* ── CTA fallback ── */
+  --cta-bg: linear-gradient(135deg, #6366f1, #4f46e5);
+  --cta-text: #fff;
+  --cta-glow: rgba(99,102,241,0.25);
+
+  /* ── Shadows (fallback — presets may override) ── */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.4);
+
+  /* ── Radius ── */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* ── Typography (sizing only — fonts set by preset + assembler) ── */
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-size: 17px;
+  --line-height: 1.7;
+
+  /* ── Layout ── */
+  --content-width: 760px;
+  --page-width: 1100px;
+  --section-gap: 56px;
+  --container-padding: 24px;
+}
+
+/* ── Base Typography ── */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  color: var(--text);
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 16px; }
+h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); font-weight: 600; margin-bottom: 10px; }
+h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+
+p { margin-bottom: 1em; color: var(--text-2); }
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--primary); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--primary-hover); }
+
+strong { color: var(--text); font-weight: 600; }
+
+ul, ol { padding-left: 1.5em; margin-bottom: 1em; color: var(--text-2); }
+li { margin-bottom: 0.4em; }
+li::marker { color: var(--primary); }
+
+/* ── Layout Containers ── */
+.page-wrapper {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Full-width wrapper for hero, CTA sections */
+.full-width {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+main {
+  padding: var(--section-gap) 0;
+}
+
+main > section,
+main > .component {
+  margin-bottom: var(--section-gap);
+}
+
+/* ── Card Base ── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  transition: all 0.25s ease;
+  position: relative;
+}
+.card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--primary-glow);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2), 0 0 0 1px var(--primary-glow);
+}
+.card h4 { margin-bottom: 8px; }
+.card .highlight {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 12px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Card Grid ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* ── CTA Button ── */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: var(--cta-bg);
+  color: var(--cta-text);
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 20px var(--cta-glow);
+  letter-spacing: 0.02em;
+}
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px var(--cta-glow), 0 0 0 2px var(--primary-glow);
+  color: var(--cta-text);
+}
+
+/* ── Table Base ── */
+.table-wrap {
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+.table-wrap table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.table-wrap th {
+  background: var(--bg-subtle);
+  color: var(--text);
+  font-weight: 600;
+  text-align: left;
+  padding: 14px 18px;
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+.table-wrap td {
+  padding: 14px 18px;
+  color: var(--text-2);
+  border-bottom: 1px solid var(--border);
+}
+.table-wrap tr:last-child td { border-bottom: none; }
+.table-wrap tr:hover td { background: var(--bg-card-hover); }
+.table-wrap tr:nth-child(even) td { background: var(--bg-subtle); }
+.table-wrap tr:first-child td { color: var(--primary); font-weight: 500; }
+
+/* ── FAQ Accordion ── */
+details {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+details:hover { border-color: var(--border-hover); }
+details[open] { border-color: var(--primary-glow); }
+details summary {
+  padding: 18px 22px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg-card);
+  transition: background 0.2s, color 0.2s;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::after {
+  content: '+';
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  transition: transform 0.3s, color 0.2s;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+details[open] summary::after { content: '\2212'; color: var(--primary); }
+details[open] summary { border-bottom: 1px solid var(--border); color: var(--primary); }
+details > div, details > p {
+  padding: 18px 22px;
+  color: var(--text-2);
+  line-height: 1.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  :root {
+    --font-size: 16px;
+    --section-gap: 36px;
+    --container-padding: 16px;
+  }
+  .card-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  :root { --container-padding: 12px; }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.35rem; }
+}
+
+/* ── Utility ── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ── Scroll Progress Bar ── */
+.progress-bar {
+  position: fixed; top: 0; left: 0;
+  height: 3px; background: var(--primary);
+  z-index: 9999; transition: width 0.1s;
+  box-shadow: 0 0 8px var(--primary-glow);
+}
+
+/* ── Back to Top ── */
+.back-top {
+  position: fixed; bottom: 24px; right: 24px;
+  width: 40px; height: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted);
+  cursor: pointer;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, background 0.2s;
+  z-index: 100;
+}
+.back-top.visible { opacity: 1; visibility: visible; }
+.back-top:hover { background: var(--bg-card-hover); color: var(--primary); }
+
+/* ── Scroll Animations ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Keyframes ── */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 var(--primary-glow); }
+  50% { box-shadow: 0 0 0 8px transparent; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ── Decorative ── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  margin: 0;
+  border: none;
+}
+
+/* ── Visual Separator (between major sections) ── */
+.visual-sep {
+  text-align: center;
+  padding: 8px 0;
+  color: var(--text-muted);
+  font-size: 0.6rem;
+  letter-spacing: 1em;
+  opacity: 0.4;
+}
+.visual-sep::before { content: '\2022 \2022 \2022'; }
+
+/* ── Icon Circle ── */
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.icon-circle--sm { width: 32px; height: 32px; font-size: 0.85rem; }
+.icon-circle--lg { width: 48px; height: 48px; font-size: 1.15rem; }
+
+/* ── Stat Row ── */
+.stat-row {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+.stat-item {
+  text-align: center;
+}
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ── Noise texture overlay ── */
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ═══════════════════════════════════════════════════ */
+/* ═══ DESIGN STYLE VARIANTS                      ═══ */
+/* ═══════════════════════════════════════════════════ */
+
+/* ── Card Styles ── */
+.card--bordered {
+  border: 1px solid var(--border);
+  background: transparent;
+  box-shadow: none;
+}
+.card--shadow {
+  border: none;
+  box-shadow: var(--shadow-md);
+  background: var(--bg-card);
+}
+.card--glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: none;
+}
+.card--flat {
+  background: var(--bg-card);
+  border: none;
+  box-shadow: none;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Background Textures ── */
+.page--noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-blend-mode: overlay;
+}
+.page--gradient-mesh::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(var(--primary-rgb, 99,102,241), 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(var(--primary-rgb, 99,102,241), 0.04) 0%, transparent 40%),
+    radial-gradient(ellipse at 60% 80%, rgba(var(--primary-rgb, 99,102,241), 0.03) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ── Section Dividers ── */
+.page--divider-line .content-section + .content-section {
+  border-top: 1px solid var(--border);
+  padding-top: var(--section-gap, 3rem);
+}
+.page--divider-gradient .content-section + .content-section::before {
+  content: '';
+  display: block;
+  height: 1px;
+  margin-bottom: var(--section-gap, 3rem);
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+.page--divider-none .content-section + .content-section {
+  border-top: none;
+}
+
+/* ── Spacing Variants ── */
+.page--spacing-tight {
+  --section-gap: 2rem;
+  --content-gap: 1rem;
+}
+.page--spacing-tight .content-section { margin-bottom: 2rem; }
+.page--spacing-tight .content-section + .content-section { margin-top: 0; }
+
+.page--spacing-normal {
+  --section-gap: 3rem;
+  --content-gap: 1.5rem;
+}
+
+.page--spacing-airy {
+  --section-gap: 4.5rem;
+  --content-gap: 2rem;
+}
+.page--spacing-airy .content-section { margin-bottom: 4.5rem; }
+
+/* ── Animation Variants ── */
+.page--animate-none .fade-in {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+.page--animate-subtle .fade-in {
+  transition-duration: 0.4s;
+}
+.page--animate-dynamic .fade-in {
+  transition-duration: 0.6s;
+  transform: translateY(30px);
+}
+
+/* ── TOC Variants ── */
+.toc--sidebar {
+  position: sticky;
+  top: 80px;
+  float: right;
+  width: 220px;
+  margin-left: 2rem;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  font-size: 0.8rem;
+  scrollbar-width: thin;
+}
+@media (max-width: 1024px) {
+  .toc--sidebar {
+    float: none;
+    position: static;
+    width: 100%;
+    margin-left: 0;
+    max-height: none;
+  }
+}
+
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 36px 0;
+  margin-top: var(--section-gap);
+}
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+.footer-copy { margin: 0; }
+.footer-links {
+  display: flex;
+  gap: 18px;
+}
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 0.8rem;
+}
+.footer-links a:hover { color: var(--text-2); }
+.footer-updated {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+/* ── Navigation ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+.nav-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.nav-links a {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-2);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links a:hover {
+  color: var(--text);
+  background: var(--bg-card);
+}
+.nav-links a.cta-pill {
+  background: var(--primary);
+  color: #fff;
+  margin-left: 8px;
+}
+.nav-links a.cta-pill:hover {
+  background: var(--primary-hover);
+}
+
+/* ── More dropdown ── */
+.nav-more {
+  position: relative;
+}
+.nav-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-more-btn:hover {
+  color: var(--text);
+  background: var(--bg-card);
+}
+.nav-more-arrow {
+  font-size: 0.65rem;
+  transition: transform 0.2s;
+}
+.nav-more.open .nav-more-arrow {
+  transform: rotate(180deg);
+}
+.nav-more-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 200px;
+  background: var(--bg-2, var(--bg));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md, 8px);
+  padding: 6px;
+  box-shadow: var(--shadow-md);
+  flex-direction: column;
+  z-index: 200;
+}
+.nav-more.open .nav-more-dropdown {
+  display: flex;
+}
+.nav-more-dropdown a {
+  padding: 8px 14px;
+  border-radius: var(--radius-sm, 4px);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-2);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s, background 0.15s;
+}
+.nav-more-dropdown a:hover {
+  color: var(--text);
+  background: var(--bg-card);
+}
+
+/* ── Mobile nav ── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text-2);
+  transition: transform 0.2s;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-more-btn { display: none; }
+  .nav-more-dropdown {
+    display: flex;
+    position: static;
+    background: none;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    min-width: auto;
+  }
+}
+
+/* ── Nav behavior modifiers ── */
+.nav--auto-hide {
+  transition: transform 0.3s ease;
+}
+.nav--auto-hide.nav--hidden {
+  transform: translateY(-100%);
+}
+.nav--transparent {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom-color: transparent;
+  transition: background 0.3s, border-color 0.3s;
+}
+.nav--transparent.nav--scrolled {
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom-color: var(--border);
+}
+
+/* ── Price Ticker ── */
+.ticker-bar {
+  background: color-mix(in srgb, var(--bg) 95%, transparent);
+  border-top: 1px solid var(--border);
+  padding: 8px 0;
+  font-size: 0.75rem;
+  font-family: var(--font-body);
+}
+.ticker-inner {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.ticker-inner::-webkit-scrollbar { display: none; }
+.ticker-items {
+  display: flex;
+  gap: 28px;
+  white-space: nowrap;
+  align-items: center;
+}
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-2);
+}
+.ticker-item b {
+  color: var(--text);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+}
+.ticker-up { color: #10b981; font-weight: 500; }
+.ticker-down { color: #ef4444; font-weight: 500; }
+.ticker-loading {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Content Sections ── */
+.content-section {
+  scroll-margin-top: 72px;
+}
+.content-section h2 {
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 24px;
+  position: relative;
+}
+.content-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 1px;
+}
+.content-section h3 {
+  margin-top: 32px;
+  padding-top: 8px;
+}
+
+/* ── Capsule (featured snippet bait) ── */
+.capsule {
+  background: var(--primary-light);
+  border-left: 3px solid var(--primary);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 24px;
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* ── Evidence block ── */
+.evidence {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 18px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: var(--text-2);
+}
+.evidence::before {
+  content: '\25C6';
+  color: var(--primary);
+  font-size: 0.7rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* ── Subsection ── */
+.subsection {
+  margin-top: 28px;
+}
+.subsection h3 {
+  margin-top: 0;
+}
+
+/* ── Cards variant ── */
+.section--cards .card-grid {
+  margin-top: 24px;
+}
+.section--cards .card h4 {
+  color: var(--text);
+  margin-bottom: 10px;
+}
+.section--cards .card p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--text-2);
+}
+
+/* ── Steps variant ── */
+.steps {
+  counter-reset: step;
+  margin-top: 24px;
+  position: relative;
+  padding-left: 28px;
+}
+/* Connecting line */
+.steps::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 18px;
+  bottom: 18px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary), var(--border));
+  border-radius: 1px;
+}
+.step {
+  counter-increment: step;
+  display: flex;
+  gap: 16px;
+  padding: 22px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  margin-bottom: 12px;
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.step:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-sm);
+}
+.step::before {
+  content: counter(step);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 38px;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--border);
+}
+.step-content h4 { margin-bottom: 8px; }
+.step-content p { font-size: 0.9rem; margin: 0; color: var(--text-2); }
+/* ── CTA Section (bottom) ── */
+.cta-section {
+  text-align: center;
+  padding: 64px 40px;
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--primary-light) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  margin-top: var(--section-gap);
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-inner {
+  position: relative;
+  z-index: 1;
+}
+.cta-inner h2 {
+  border-bottom: none;
+  margin-bottom: 14px;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+}
+.cta-inner h2::after { display: none; }
+.cta-inner p {
+  max-width: 520px;
+  margin: 0 auto 28px;
+  color: var(--text-2);
+  font-size: 1.05rem;
+}
+
+/* ── Inline CTA (between sections) ── */
+.cta-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 28px;
+  background: var(--primary-light);
+  border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
+  border-radius: var(--radius-md);
+  margin: 36px 0;
+  transition: border-color 0.2s;
+}
+.cta-inline:hover {
+  border-color: color-mix(in srgb, var(--primary) 40%, transparent);
+}
+.cta-inline p {
+  margin: 0;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1rem;
+}
+.cta-inline .cta-button {
+  white-space: nowrap;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+}
+
+/* ── Sticky CTA Bar ── */
+.cta-sticky {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  padding: 14px 24px;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.cta-sticky.visible {
+  transform: translateY(0);
+}
+.cta-sticky p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-2);
+}
+
+@media (max-width: 600px) {
+  .cta-section { padding: 40px 24px; }
+  .cta-inline {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* ── Pros & Cons ── */
+.pros-cons-section { scroll-margin-top: 72px; }
+.pros-cons-section h2::after { display: none; }
+
+.pros-cons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+.pros-col, .cons-col {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.pros-col::before, .cons-col::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+.pros-col::before { background: linear-gradient(90deg, #10b981, #34d399); }
+.cons-col::before { background: linear-gradient(90deg, #f43f5e, #fb7185); }
+
+.pros-heading, .cons-heading {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pros-heading { color: #10b981; }
+.cons-heading { color: #f43f5e; }
+.pros-heading::before { content: '\2713'; }
+.cons-heading::before { content: '\2717'; }
+
+.pros-list, .cons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pros-list li, .cons-list li {
+  padding: 8px 0 8px 24px;
+  position: relative;
+  color: var(--text-2);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--border);
+}
+.pros-list li:last-child, .cons-list li:last-child { border-bottom: none; }
+.pros-list li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.cons-list li::before {
+  content: '\2013';
+  position: absolute;
+  left: 2px;
+  color: #f43f5e;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .pros-cons-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Comparison Cards variant ── */
+.comparison-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.comp-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+.comp-card:first-child {
+  border-color: var(--primary-glow);
+  box-shadow: 0 0 0 1px var(--primary-glow);
+}
+.comp-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.comp-card h4 {
+  margin-bottom: 10px;
+}
+.comp-card .comp-rating {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+}
+.comp-card .comp-details {
+  font-size: 0.85rem;
+  color: var(--text-2);
+  text-align: left;
+}
+.comp-card .comp-details dt {
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 10px;
+}
+/* ═══ HERO — Premium ═══ */
+.hero {
+  text-align: center;
+  padding: 100px var(--container-padding) 72px;
+  position: relative;
+  overflow: hidden;
+  max-width: var(--page-width);
+  margin: 0 auto;
+}
+
+/* Radial glow */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 500px;
+  background: radial-gradient(ellipse at center, var(--primary-glow) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Bottom separator */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-2);
+  margin-bottom: 28px;
+  letter-spacing: 0.03em;
+  backdrop-filter: blur(8px);
+}
+.hero-badge .dot {
+  width: 7px;
+  height: 7px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--primary-glow);
+  animation: pulse-glow 2.5s ease infinite;
+}
+
+.hero h1 {
+  margin-bottom: 20px;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-2);
+  max-width: 580px;
+  margin: 0 auto 36px;
+  line-height: 1.65;
+}
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ═══ GRADIENT ═══ */
+.hero--gradient {
+  padding: 120px var(--container-padding) 88px;
+  background: linear-gradient(160deg, var(--bg) 0%, var(--bg-2) 40%, var(--bg) 100%);
+}
+.hero--gradient::before {
+  width: 1100px;
+  height: 600px;
+  opacity: 0.45;
+}
+.hero--gradient h1 {
+  background: linear-gradient(135deg, var(--text) 30%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ═══ SPLIT ═══ */
+.hero--split {
+  text-align: left;
+  padding: 80px var(--container-padding) 64px;
+}
+.hero--split .hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: var(--page-width);
+}
+.hero--split .hero-subtitle {
+  margin: 0 0 32px;
+  max-width: none;
+}
+.hero--split .hero-cta { justify-content: flex-start; }
+.hero-visual {
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--primary-light) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 40%, var(--primary-glow) 100%);
+}
+
+/* ═══ MINIMAL ═══ */
+.hero--minimal {
+  padding: 56px var(--container-padding) 40px;
+}
+.hero--minimal::before { display: none; }
+.hero--minimal::after { opacity: 0.5; }
+.hero--minimal .hero-subtitle { margin-bottom: 0; }
+.hero--minimal .hero-inner { max-width: 640px; }
+
+/* ═══ Responsive ═══ */
+@media (max-width: 768px) {
+  .hero { padding: 72px var(--container-padding) 48px; }
+  .hero-subtitle { font-size: 1.05rem; }
+  .hero--gradient { padding: 88px var(--container-padding) 56px; }
+  .hero--split .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero--split .hero-cta { justify-content: center; }
+  .hero-visual { display: none; }
+}
+/* ── FAQ Section ── */
+.faq-section { scroll-margin-top: 72px; }
+.faq-section h2 {
+  margin-bottom: 24px;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── FAQ Grid variant ── */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 14px;
+}
+.faq-grid .faq-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  transition: border-color 0.2s;
+}
+.faq-grid .faq-card:hover {
+  border-color: var(--border-hover);
+}
+.faq-grid .faq-card h4 {
+  color: var(--text);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+.faq-grid .faq-card p {
+  color: var(--text-2);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── Table of Contents ── */
+.toc {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  margin-bottom: var(--section-gap);
+}
+.toc-title {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.toc-list {
+  padding-left: 0;
+  margin: 0;
+  counter-reset: toc;
+  list-style: none;
+}
+.toc-list li {
+  counter-increment: toc;
+  margin-bottom: 4px;
+}
+.toc-list li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  color: var(--text-2);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s, background 0.2s;
+}
+.toc-list li a:hover {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+.toc-list li a::before {
+  content: counter(toc, decimal-leading-zero);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 24px;
+}
+
+@media (max-width: 600px) {
+  .faq-grid { grid-template-columns: 1fr; }
+}
+/* ── Key Takeaway / Blockquote ── */
+.key-takeaway {
+  padding: 24px 28px;
+  background: var(--bg-card);
+  border-left: 3px solid var(--primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 28px 0;
+  position: relative;
+}
+.key-takeaway::before {
+  content: '\201C';
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 3rem;
+  color: var(--primary-glow);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+.key-takeaway p {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.65;
+  padding-left: 8px;
+}
+
+/* ── Definition Box ── */
+.definition-box {
+  padding: 22px 26px;
+  background: var(--primary-light);
+  border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
+  border-radius: var(--radius-md);
+  margin-bottom: 28px;
+}
+.definition-box p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.7;
+}
+.definition-box strong {
+  color: var(--primary);
+}
+/* ── Trust Section ── */
+.trust-section { scroll-margin-top: 72px; }
+.trust-points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.trust-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  font-size: 0.9rem;
+  color: var(--text-2);
+  line-height: 1.6;
+  transition: border-color 0.2s;
+}
+.trust-point:hover {
+  border-left-color: var(--primary-hover);
+}
+.trust-point::before {
+  content: '\2713';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Disclaimer ── */
+.disclaimer-block {
+  padding: 18px 22px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-top: 28px;
+}
+.disclaimer-block p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.65;
+}
+.disclaimer-block strong {
+  color: var(--text-2);
+}
+
+:root {
+  --primary: #F7C948;
+  --primary-hover: #d1aa3d;
+  --primary-dim: #ac8c32;
+  --primary-glow: rgba(247,201,72,0.12);
+  --primary-light: rgba(247,201,72,0.08);
+  --cta-bg: linear-gradient(135deg, #F7C948, #d1aa3d);
+  --cta-glow: rgba(247,201,72,0.25);
+}
+:root { --font-heading: 'Space Grotesk', -apple-system, sans-serif; --font-body: 'Inter', -apple-system, sans-serif; }
+
+  </style>
+</head>
+<body class="">
+  <div class="progress-bar" id="progress"></div>
+  
+  <nav class="nav">
+  <div class="nav-inner page-wrapper">
+    <a href="/" class="nav-brand">Looksrare Nft</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#what-looksrare-nft-means-in-practice">What LooksRare NFT</a>
+      <a href="#how-buying-and-selling-on-looksrare-works">How Buying and</a>
+      <a href="#the-real-cost-of-looksrare-trading">The Real Cost</a>
+      <div class="nav-more">
+        <button class="nav-more-btn" id="nav-more-btn">More <span class="nav-more-arrow">&#9662;</span></button>
+        <div class="nav-more-dropdown" id="nav-more-dropdown">
+          <a href="#why-looks-token-rewards-matter">Why LOOKS Token</a>
+        <a href="#what-to-watch-out-for-with-looksrare">What to Watch</a>
+        <a href="#looksrare-vs-other-nft-marketplaces">LooksRare vs Other</a>
+        <a href="#when-looksrare-fits-your-strategy">When LooksRare Fits</a>
+        <a href="#faq">FAQ</a>
+        </div>
+      </div>
+      <a href="/looksrare-nft/" class="cta-pill">Get Started</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<section class="hero noise-overlay">
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="dot"></span> Live DeFi Rates</div>
+    <h1>LooksRare NFT: How the Marketplace Works, Fees, Rewards, and Risks</h1>
+    <p class="hero-subtitle">LooksRare NFT trading centers on Ethereum collections, WETH-denominated bids, and LOOKS token incentives. This guide compares the marketplace with larger rivals, then explains fees, royalties, wallet connection, and the practical risks that matter before you trade.</p>
+    <div class="hero-cta"><a href="/looksrare-nft/" class="cta-button">Explore LooksRare NFT &rarr;</a></div>
+    <div class="stat-row"><div class="stat-item"><div class="stat-value">2%</div><div class="stat-label">standard seller fee on LooksRare</div></div><div class="stat-item"><div class="stat-value">Ethereum</div><div class="stat-label">network used for core marketplace activity</div></div></div>
+  </div>
+</section>
+<main class="page-wrapper">
+<nav class="toc" aria-label="Table of Contents">
+  <h2 class="toc-title">Contents</h2>
+  <ol class="toc-list">
+    <li><a href="#what-looksrare-nft-means-in-practice">What LooksRare NFT Means in Practice</a></li>
+    <li><a href="#how-buying-and-selling-on-looksrare-works">How Buying and Selling on LooksRare Works</a></li>
+    <li><a href="#the-real-cost-of-looksrare-trading">The Real Cost of LooksRare Trading</a></li>
+    <li><a href="#why-looks-token-rewards-matter">Why LOOKS Token Rewards Matter</a></li>
+    <li><a href="#what-to-watch-out-for-with-looksrare">What to Watch Out for with LooksRare</a></li>
+    <li><a href="#looksrare-vs-other-nft-marketplaces">LooksRare vs Other NFT Marketplaces</a></li>
+    <li><a href="#when-looksrare-fits-your-strategy">When LooksRare Fits Your Strategy</a></li>
+    <li><a href="#comparison">Comparison</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ol>
+</nav>
+
+<section class="content-section" id="what-looksrare-nft-means-in-practice">
+  <h2>What LooksRare NFT Means in Practice</h2>
+  <p class="capsule">LooksRare NFT refers to NFTs traded on LooksRare, an Ethereum-based marketplace where users buy, sell, and list collections through connected wallets while interacting with platform incentives tied to the LOOKS token.</p>
+  <p class="evidence">LooksRare&#x27;s standard marketplace fee has been published at 2%, with settlement handled through Ethereum smart contracts and WETH-based trading flows.</p>
+  <p><strong>LooksRare NFT</strong> usually means NFTs traded through the LooksRare marketplace rather than a separate token standard. The platform launched on Ethereum as an alternative to larger NFT venues, with trading rewards and staking rewards designed to attract activity after the OpenSea migration wave. For technical background on how NFTs work on Ethereum, see <a href="https://ethereum.org/en/nft/">Ethereum's NFT overview</a>.</p><p>In practical terms, users connect a wallet, review verified collections, place bids in WETH, and sign transactions through smart contracts. That makes LooksRare for NFTs most relevant to traders who already understand wallet security, Ethereum gas fees, and collection floor price behavior.</p><ul><li><strong>Buy NFTs</strong> from listed collections or accepted bids</li><li><strong>Sell NFTs</strong> by listing ERC-721 tokens and some ERC-1155 tokens</li><li>Track royalties, platform fees, and trading volume before entering a market</li></ul><p></p>
+  <div class="subsection"><h3>Why traders mention LooksRare instead of just NFT marketplace</h3><p>The name matters because LooksRare combines a marketplace interface with token incentives. Buyers and sellers are not only evaluating art or collectibles; they are also evaluating fee structure, liquidity, and whether LOOKS token rewards distort or improve market activity.</p></div>
+<div class="subsection"><h3>How the platform differs from a simple gallery site</h3><p>LooksRare is transactional infrastructure, not just discovery. Listings, bids, royalty handling, and wallet signatures all happen through onchain-compatible workflows, so users need to think about contract interactions, gas costs, and market depth.</p></div>
+
+</section>
+
+<section class="content-section" id="how-buying-and-selling-on-looksrare-works">
+  <h2>How Buying and Selling on LooksRare Works</h2>
+  <p class="capsule">Buying NFTs on LooksRare starts with wallet connection and collection review, then moves through bidding, listing, or direct purchase. Each action combines marketplace logic with Ethereum transaction signing and gas costs.</p>
+  <div class="steps">
+    <div class="step"><div class="step-content"><h4>Connect your wallet</h4><p>Use a supported Ethereum wallet and verify the site URL before signing any request.</p></div></div>
+<div class="step"><div class="step-content"><h4>Check the collection</h4><p>Confirm verified collections, token type, floor price, and recent sales before bidding.</p></div></div>
+<div class="step"><div class="step-content"><h4>Pick direct buy or bid</h4><p>Direct buys execute at the listed ask, while bids use WETH and may fill later.</p></div></div>
+<div class="step"><div class="step-content"><h4>Confirm the transaction</h4><p>Review approvals, royalties, platform fees, and Ethereum gas fees before final settlement.</p></div></div>
+
+  </div>
+</section>
+
+<section class="content-section section--cards" id="the-real-cost-of-looksrare-trading">
+  <h2>The Real Cost of LooksRare Trading</h2>
+  <p class="capsule">The visible listing price is only part of the trade cost. On LooksRare, users need to factor in seller fees, creator royalties when applicable, WETH conversion friction, and Ethereum gas fees.</p>
+  <div class="card-grid">
+    <div class="card"><h4>Marketplace fee</h4><p>LooksRare has generally used a 2% seller fee, lower than some historical NFT marketplace norms.</p><span class="highlight">Visible fee</span></div>
+<div class="card"><h4>Ethereum gas fees</h4><p>Gas can apply to approvals, WETH actions, and settlement, and it changes with network demand.</p><span class="highlight">Variable cost</span></div>
+<div class="card"><h4>Royalties</h4><p>Creator royalty handling depends on collection rules and marketplace policy.</p><span class="highlight">Collection-specific</span></div>
+
+  </div>
+</section>
+
+<div class="cta-inline">
+  <p>If you are deciding between LooksRare and other venues, compare all-in cost and liquidity before committing capital.</p>
+  <a href="/looksrare-nft/" class="cta-button">Compare LooksRare NFT Options &rarr;</a>
+</div>
+
+<section class="content-section" id="why-looks-token-rewards-matter">
+  <h2>Why LOOKS Token Rewards Matter</h2>
+  <p class="capsule">LOOKS token incentives shaped LooksRare&#x27;s identity by rewarding marketplace participation and staking. That incentive model can attract liquidity, but it can also distort headline trading volume if users trade mainly to farm rewards.</p>
+  <p class="evidence">Reward-driven marketplaces often show a gap between gross volume and economically meaningful volume because incentives can change trader behavior.</p>
+  <p><strong>LOOKS token</strong> rewards are the main reason LooksRare is discussed differently from a plain NFT marketplace. The platform used trading rewards and staking rewards to attract users, giving traders an additional return variable beyond the NFT itself.</p><p>That creates both upside and noise. Rewards can improve liquidity and user retention, but they can also encourage behavior that inflates trading volume without reflecting true collector demand. For market references on the token itself, compare <a href="https://coinmarketcap.com/currencies/looksrare/"><a href="https://coinmarketcap.com/currencies/looksrare/" target="_blank" rel="noopener noreferrer">LOOKS on CoinMarketCap</a></a> with marketplace usage data instead of relying on token charts alone.</p><p></p>
+  <div class="subsection"><h3>Staking rewards versus trading rewards</h3><p>Staking rewards compensate token holders who lock LOOKS, while trading rewards historically targeted marketplace activity. These are not the same signal. Staking reflects tokenomics participation, while trading rewards can influence order flow and turnover.</p></div>
+<div class="subsection"><h3>How rewards affect buyer decision-making</h3><p>Sophisticated buyers do not treat rewards as free money. They discount the token&#x27;s price volatility, liquidity, and unlock dynamics, then compare those factors against the marketplace fee and the probability of executing at a better price than on competing venues.</p></div>
+
+</section>
+
+<section class="content-section" id="what-to-watch-out-for-with-looksrare">
+  <h2>What to Watch Out for with LooksRare</h2>
+  <p class="capsule">The biggest risks on LooksRare are not unique to one platform, but they show up clearly there: wash trading, fake collections, risky wallet approvals, and thin liquidity in many NFT markets.</p>
+  <p class="evidence">Reward-linked NFT venues have repeatedly faced scrutiny because self-trading can manufacture volume while masking true market demand.</p>
+  <p><strong>Wash trading</strong> became one of the most discussed issues around LooksRare because reward systems can make self-directed volume more attractive. For buyers, the practical takeaway is simple: do not assume high trading volume equals strong organic demand.</p><p>Counterparty and collection risk remain just as important. Fake collections, misleading floor prices, and overbroad wallet approvals can all produce losses even when the marketplace interface itself works as intended. Use the official <a href="https://looksrare.org/"><a href="https://looksrare.org/" target="_blank" rel="noopener noreferrer">LooksRare official marketplace</a></a> link and verify collections before signing anything.</p><ul><li>Review whether a collection is verified</li><li>Compare unique buyers and sellers, not just volume</li><li>Revoke stale approvals when you no longer need them</li><li>Treat sudden price spikes around rewards periods with skepticism</li></ul>
+  <div class="subsection"><h3>How to spot possible wash trading</h3><p>Look for repeated back-and-forth sales, prices that are disconnected from comparable collections, and unusually high volume with limited unique wallet participation. None of those factors proves manipulation alone, but the combination should slow you down.</p></div>
+<div class="subsection"><h3>Wallet security is not optional</h3><p>Most user losses in NFT trading come from phishing, malicious approvals, or signing transactions they did not fully review. Separate trading wallets from long-term storage where possible, and read every approval request before confirming it.</p></div>
+
+</section>
+
+<section class="content-section section--cards" id="looksrare-vs-other-nft-marketplaces">
+  <h2>LooksRare vs Other NFT Marketplaces</h2>
+  <p class="capsule">LooksRare stands out through token incentives and its fee profile, but buyers still need to compare liquidity, royalties, collection coverage, and execution quality against competing NFT marketplaces.</p>
+  <div class="card-grid">
+    <div class="card"><h4>Fee profile</h4><p>LooksRare has historically advertised lower marketplace fees than some dominant rivals.</p><span class="highlight">Potentially cheaper</span></div>
+<div class="card"><h4>Liquidity quality</h4><p>Large rivals may still offer stronger organic depth for many major NFT collections.</p><span class="highlight">Execution risk</span></div>
+<div class="card"><h4>Reward model</h4><p>LOOKS incentives can improve economics, but they can also distort trading volume.</p><span class="highlight">Double-edged</span></div>
+
+  </div>
+</section>
+
+<section class="content-section" id="when-looksrare-fits-your-strategy">
+  <h2>When LooksRare Fits Your Strategy</h2>
+  <p class="capsule">LooksRare is best suited to users who understand Ethereum transaction flow, compare marketplaces before each trade, and care about reward mechanics as much as listed price.</p>
+  <p class="evidence">The more often you trade, the more fee differences, gas discipline, and liquidity quality affect your net outcome.</p>
+  <p><strong>NFTs on LooksRare</strong> are not automatically better or worse than elsewhere. The marketplace fits traders who already evaluate platform fees, creator royalties, and gas-adjusted execution, and who are comfortable checking for verified collections before every order.</p><p>It is usually less suitable for users who want a simple collecting experience with minimal wallet management. If you are still learning how signatures, approvals, and WETH offers work, spend time on the mechanics first. </p><ul><li><strong>Good fit:</strong> active traders, arbitrage-aware users, reward-sensitive sellers</li><li><strong>Weaker fit:</strong> first-time collectors, users uncomfortable with contract approvals, buyers chasing hype volume</li></ul>
+  <div class="subsection"><h3>Best use cases for experienced traders</h3><p>Experienced users can compare floor prices across marketplaces, factor in WETH requirements, and decide whether reward incentives change the expected return enough to justify using LooksRare.</p></div>
+<div class="subsection"><h3>How occasional collectors should approach it</h3><p>Occasional buyers should focus less on token incentives and more on collection legitimacy, wallet hygiene, and all-in cost. Missing one approval detail can cost more than any fee savings.</p></div>
+
+</section>
+
+<section class="content-section comparison-section" id="comparison">
+  <h2>LooksRare vs Other NFT Marketplaces at a Glance</h2>
+  <p class="capsule">LooksRare can win on fee structure and incentives, but larger marketplaces often still win on liquidity depth and cleaner price discovery.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Factor</th><th>LooksRare</th><th>Larger NFT rivals</th><th>Why it matters</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Core network</td><td>Ethereum-focused</td><td>Often multi-collection with broader coverage</td><td>Determines wallet flow, gas exposure, and collection access</td></tr>
+<tr><td>Fee emphasis</td><td>Historically lower visible marketplace fee</td><td>May charge more depending on venue and policy</td><td>Headline fees affect seller economics but not total cost alone</td></tr>
+<tr><td>Rewards</td><td>LOOKS token incentives and staking rewards</td><td>Usually less token-incentive-driven</td><td>Can improve economics or distort volume signals</td></tr>
+<tr><td>Liquidity quality</td><td>Collection-dependent and sometimes thinner</td><td>Often stronger in major collections</td><td>Depth affects slippage, time-to-fill, and pricing confidence</td></tr>
+<tr><td>Risk profile</td><td>Wash-trading concerns discussed heavily</td><td>Different risks, but often more organic volume in top collections</td><td>Volume quality matters more than raw turnover</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="content-section faq-section" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <details><summary>What is LooksRare NFT?</summary><div><p>LooksRare NFT usually refers to NFTs traded on LooksRare, an Ethereum-based NFT marketplace launched as an alternative to OpenSea. It lets users buy, sell, and list NFTs, earn platform rewards through the LOOKS token, and interact with collections using connected crypto wallets.</p></div></details>
+<details><summary>Is LooksRare only for Ethereum NFTs?</summary><div><p>LooksRare is primarily associated with Ethereum NFT trading, including common standards such as ERC-721 tokens and some ERC-1155 tokens. That means users need an Ethereum-compatible wallet and should expect Ethereum gas fees when approvals or settlement are required.</p></div></details>
+<details><summary>How much does it cost to sell on LooksRare?</summary><div><p>The marketplace has generally used a 2% seller fee, but your real cost can be higher once you include creator royalties where applicable and Ethereum gas fees. Sellers should compare all-in cost, not just the headline fee, before listing NFTs.</p></div></details>
+<details><summary>Why is wash trading mentioned so often with LooksRare?</summary><div><p>Wash trading became a frequent talking point because token rewards can create incentives to generate volume that does not reflect genuine market demand. A better read comes from checking unique participants, collection quality, and token data such as &lt;a href=&quot;https://www.coingecko.com/en/coins/looksrare&quot;&gt;LOOKS on CoinGecko&lt;/a&gt;, not just raw marketplace volume.</p></div></details>
+<details><summary>Do I need WETH to buy NFTs on LooksRare?</summary><div><p>Not always, but many bid and offer workflows use WETH because smart contracts can pull it when an order executes. If you plan to place collection offers rather than only accept fixed-price asks, holding WETH is often more practical.</p></div></details>
+<details><summary>Is LooksRare safe to use?</summary><div><p>The platform itself uses smart contracts and wallet-based trading, but user safety still depends heavily on wallet hygiene, collection verification, and approval discipline. If you are unsure how NFT markets work, Investopedia&#x27;s overview of &lt;a href=&quot;https://www.investopedia.com/non-fungible-tokens-nft-5115211&quot;&gt;non-fungible tokens&lt;/a&gt; is a useful refresher before trading.</p></div></details>
+
+  </div>
+</section>
+
+<div class="disclaimer-block">
+  <p><strong>Disclaimer:</strong> This content is for informational purposes only and is not investment, tax, legal, or financial advice. NFT prices, token incentives, and Ethereum transaction costs can change quickly, and you should do your own research before buying or selling.</p>
+</div>
+
+<section class="cta-section" id="cta">
+  <div class="cta-inner">
+    <h2>Assess the market before you trade</h2>
+    <p>Compare fees, liquidity, royalties, and wallet requirements before using the LooksRare NFT marketplace.</p>
+    <a href="/looksrare-nft/" class="cta-button">Get Started with LooksRare NFT &rarr;</a>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="page-wrapper">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; LooksRare NFT</p>
+      
+      <p class="footer-updated">Last updated: 2026-03-25</p>
+    </div>
+  </div>
+</footer>
+
+  <button class="back-top" id="btt" aria-label="Back to top">&uarr;</button>
+  <script>
+    /* Progress bar */
+    window.addEventListener('scroll',function(){var s=document.documentElement,t=s.scrollHeight-s.clientHeight;document.getElementById('progress').style.width=t?((s.scrollTop/t)*100)+'%':'0%'});
+    /* Back to top */
+    var btt=document.getElementById('btt');window.addEventListener('scroll',function(){btt.classList.toggle('visible',window.scrollY>400)});btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+    
+/* Nav toggle */
+var nt=document.getElementById('nav-toggle'),nl=document.getElementById('nav-links');
+if(nt&&nl){nt.addEventListener('click',function(){nl.classList.toggle('open')})}
+/* Nav More dropdown */
+var nm=document.getElementById('nav-more-btn'),nd=nm&&nm.closest('.nav-more');
+if(nm&&nd){nm.addEventListener('click',function(e){e.stopPropagation();nd.classList.toggle('open')});document.addEventListener('click',function(){nd.classList.remove('open')})}
+/* Nav auto-hide on scroll */
+var nav=document.querySelector('.nav--auto-hide');
+if(nav){var ls=0;window.addEventListener('scroll',function(){var c=window.scrollY;if(c>ls&&c>80){nav.classList.add('nav--hidden')}else{nav.classList.remove('nav--hidden')}ls=c})}
+/* Nav transparent until scroll */
+var tn=document.querySelector('.nav--transparent');
+if(tn){window.addEventListener('scroll',function(){tn.classList.toggle('nav--scrolled',window.scrollY>60)})}
+/* Sticky CTA show on scroll */
+var sc=document.querySelector('.cta-sticky');
+if(sc){window.addEventListener('scroll',function(){sc.classList.toggle('visible',window.scrollY>800)})}
+/* Scroll fade-in animations */
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target)}})},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.content-section,.card,.step,.faq-section,.cta-section,.trust-section,.comparison-section,.pros-cons-section,.toc,.pricing-section,.testimonials-section,.stats-bar').forEach(function(el){el.classList.add('fade-in');io.observe(el)});
+/* CoinGecko price ticker */
+var ticker=document.getElementById('price-ticker');
+if(ticker){var coins=['bitcoin','ethereum','matic-network','solana','binancecoin'];function updTicker(){fetch('https://api.coingecko.com/api/v3/simple/price?ids='+coins.join(',')+'&vs_currencies=usd&include_24hr_change=true').then(function(r){return r.json()}).then(function(d){var h='';coins.forEach(function(c){if(d[c]){var p=d[c].usd,ch=d[c].usd_24h_change||0,cl=ch>=0?'ticker-up':'ticker-down',nm=c.split('-')[0].toUpperCase();h+='<span class="ticker-item"><b>'+nm+'</b> $'+p.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})+' <span class="'+cl+'">'+(ch>=0?'+':'')+ch.toFixed(1)+'%</span></span>'}});document.getElementById('ticker-items').innerHTML=h}).catch(function(){})}updTicker();setInterval(updTicker,60000)}
+
+  </script>
+</body>
+</html>
