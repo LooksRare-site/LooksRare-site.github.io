@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /looksrare-nft/
-Sitemap: https://looksrare.github.io/sitemap.xml
