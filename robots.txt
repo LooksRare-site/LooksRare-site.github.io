@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://looksrare-site.github.io/sitemap.xml

@@ -1,0 +1,107 @@
+{
+ "keyword": "looksrare",
+ "h1": "LooksRare",
+ "brand": "LooksRare",
+ "niche": "tool",
+ "verb": "Trade",
+ "title": "LooksRare - Open App",
+ "meta_description": "looksrare opens the official NFT marketplace to explore collections, buy, sell, make offers, and access rewards in the app.",
+ "palette": {
+  "mode": "dark",
+  "bg": "#0A0C0E",
+  "accent": "#97F675",
+  "ink": "#FDFDFD"
+ },
+ "hero_h2": "Trade NFTs through the official marketplace app",
+ "hero_lead": "looksrare is the official NFT marketplace for exploring collections, buying and selling NFTs, making offers, and accessing rewards through its live app.",
+ "badge": "NFT Market",
+ "widget": {
+  "from": "ETH",
+  "from_net": "Ethereum",
+  "to": "NFT",
+  "to_net": "Ethereum",
+  "action": "Open LooksRare App"
+ },
+ "trust": [
+  "Official marketplace domain",
+  "WalletConnect support",
+  "Audits listed in docs"
+ ],
+ "what_is": "LooksRare is a community-first NFT marketplace for buying, selling, making offers on, and browsing digital collectibles. The official <a href=\"https://docs.looksrare.org/\">LooksRare Docs</a> cover marketplace guides, developer resources, token information, rewards, and protocol contracts.",
+ "how": [
+  {
+   "t": "Open the app",
+   "d": "Go to the official domain and confirm looksrare.org before connecting a wallet."
+  },
+  {
+   "t": "Connect wallet",
+   "d": "Use a supported wallet or WalletConnect, then review each signature request before approving."
+  },
+  {
+   "t": "Find a collection",
+   "d": "Search collections, compare listings, offers, activity, and item details inside the marketplace."
+  },
+  {
+   "t": "Trade or manage",
+   "d": "Buy listed NFTs, make offers, list owned NFTs, or open Rewards from the same app."
+  }
+ ],
+ "points": [
+  {
+   "h": "Marketplace routing",
+   "p": "The app brings collection discovery, buying, selling, offers, raffles, and rewards into one official destination."
+  },
+  {
+   "h": "NFT aggregation",
+   "p": "The <a href=\"https://docs.looksrare.org/developers/looksrare-aggregator-overview\">aggregator documentation</a> describes buying ERC721 and ERC1155 tokens from multiple marketplaces in a single transaction."
+  },
+  {
+   "h": "Protocol visibility",
+   "p": "Docs list developer resources, deployed contracts, public API references, SDK materials, and published audit links."
+  }
+ ],
+ "eeat": [
+  {
+   "text": "LooksRare Docs",
+   "url": "https://docs.looksrare.org/"
+  },
+  {
+   "text": "LooksRare Aggregator on Etherscan",
+   "url": "https://etherscan.io/address/0x00000000005228B791a99a61f36A130d50600106"
+  },
+  {
+   "text": "ethereum.org NFT overview",
+   "url": "https://ethereum.org/nft/"
+  }
+ ],
+ "faq": [
+  {
+   "q": "What is looksrare used for?",
+   "a": "looksrare is used to explore NFT collections, buy listed NFTs, make offers, sell owned NFTs, and access marketplace-related rewards through the official app.",
+   "open": true
+  },
+  {
+   "q": "Is looksrare the official app?",
+   "a": "The official app is hosted at <a href=\"https://looksrare.org/\">looksrare.org</a>; verify the domain carefully before connecting a wallet or signing any transaction.",
+   "open": false
+  },
+  {
+   "q": "What wallet do I need for looksrare?",
+   "a": "LooksRare supports wallet connections through WalletConnect and compatible crypto wallets; always review signatures and network prompts before approving.",
+   "open": false
+  },
+  {
+   "q": "Can I buy and sell NFTs on looksrare?",
+   "a": "Yes. The official marketplace includes guides for buying fixed-price NFTs, making offers, listing NFTs for sale, and accepting offers.",
+   "open": false
+  },
+  {
+   "q": "Is looksrare financial advice?",
+   "a": "No. Marketplace pages, rankings, rewards, and token references are informational; evaluate NFT risks, contract prompts, and liquidity before acting.",
+   "open": false
+  }
+ ],
+ "official_url": "https://looksrare.org/",
+ "official_domain": "looksrare.org",
+ "footer_note": "Not the official LooksRare app; verify looksrare.org before connecting. Educational only, not financial advice."
+}
