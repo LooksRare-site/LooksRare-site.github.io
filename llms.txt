@@ -1,0 +1,64 @@
+# LooksRare
+> LooksRare is a non-custodial Ethereum NFT marketplace and protocol for discovering, listing, offering on, and trading digital collectibles.
+
+## What is LooksRare
+LooksRare combines a wallet-based marketplace interface with smart contracts that settle NFT trades on Ethereum. It supports fixed-price listings, item and collection offers, aggregated marketplace listings, protocol rewards, and related NFT games. Its hybrid design keeps signed maker orders off-chain until a buyer or seller fills them on-chain. Compared with similar marketplaces, LooksRare emphasizes its LOOKS utility token, participation rewards, modular exchange contracts, and marketplace aggregation.
+
+## How it works
+1. A user connects an Ethereum wallet and approves the relevant NFT collection or payment token when required.
+2. A seller signs an EIP-712 maker order specifying the NFT, price, currency, validity period, and execution strategy; the order is stored off-chain without transferring custody.
+3. A buyer fills the listing—or a seller accepts a bid—by authorizing an Ethereum transaction.
+4. LooksRare Protocol validates signatures, nonces, approvals, currencies, and strategy rules, then atomically transfers payment and the ERC-721 or ERC-1155 asset. Protocol and applicable creator fees are deducted during settlement.
+
+## Key facts
+- Production network: Ethereum Mainnet, chain ID 1.
+- Development network: Ethereum Sepolia, chain ID 11155111.
+- Marketplace assets: ERC-721 and ERC-1155 NFTs.
+- Orders can exchange NFTs for ETH or protocol-allowed ERC-20 tokens.
+- Maker orders use human-readable EIP-712 typed-data signatures and remain off-chain until filled.
+- LooksRare is non-custodial: assets remain in users’ wallets until an authorized settlement transaction executes.
+- LOOKS is an ERC-20 utility token on Ethereum at `0xf4d2888d29d722226fafa5d9b24f9164c092421e`.
+- Exchange V2 uses modular execution strategies and a triple-nonce system for individual, grouped, or global order cancellation.
+- Standard NFT settlement is atomic and normally completes after an Ethereum transaction is confirmed.
+
+## Common questions
+**Is LooksRare safe?** Its V2 contracts have undergone third-party security review, but audits cannot eliminate smart-contract, approval, phishing, counterfeit-NFT, or market risks. Verify the domain, collection contract, order details, and wallet prompt before signing.
+
+**Does LooksRare hold my NFTs or funds?** No. Listings are signed orders, while NFTs and tokens stay in the connected wallet until settlement.
+
+**What fees apply?** A completed trade can include a protocol fee, creator fee, and Ethereum gas. Fee parameters and displayed order totals should be checked immediately before confirmation.
+
+**How long does a trade take?** Signing a listing or offer is typically immediate and off-chain. Approvals, cancellations recorded on-chain, and completed purchases require Ethereum confirmation.
+
+**Which assets and chains are supported?** The marketplace protocol targets Ethereum NFTs using ERC-721 or ERC-1155, with ETH and allowed ERC-20 payment currencies; Sepolia is available for development.
+
+**How do I start?** Install a compatible Ethereum wallet, fund it for the purchase and gas, connect only through the verified official app, review approvals, then sign or submit the requested transaction.
+
+**What are the main risks?** Key risks include malicious signatures, broad token approvals, spoofed collections, stale orders, smart-contract vulnerabilities, NFT illiquidity, volatile valuations, and uncertain rights to underlying media.
+
+## App
+- Dashboard: https://looksrare-site.github.io/
+- App: https://looksrare-site.github.io/dashboard/
+
+## Official resources
+Marketplace: https://looksrare.org/
+Documentation: https://docs.looksrare.org/
+User guides: https://docs.looksrare.org/guides/welcome
+V2 protocol overview: https://docs.looksrare.org/developers/protocol/looksrare-v2-protocol-overview
+Deployed contracts: https://docs.looksrare.org/developers/deployed-contract-addresses
+Audits: https://docs.looksrare.org/about/audits
+Exchange V2 source: https://github.com/LooksRare/contracts-exchange-v2
+SDK V2 source: https://github.com/LooksRare/sdk-v2
+Official GitHub: https://github.com/LooksRare
+Official X: https://x.com/LooksRare
+
+## Data & references
+LOOKS on Etherscan: https://etherscan.io/token/0xf4d2888d29d722226fafa5d9b24f9164c092421e
+Exchange V2 on Etherscan: https://etherscan.io/address/0x0000000000E655fAe4d56241588680F86E3b2377
+CoinGecko: https://www.coingecko.com/en/coins/looksrare
+DefiLlama: https://defillama.com/protocol/looksrare
+EIP-712: https://eips.ethereum.org/EIPS/eip-712
+ERC-721: https://eips.ethereum.org/EIPS/eip-721
+ERC-1155: https://eips.ethereum.org/EIPS/eip-1155
+ERC-2981: https://eips.ethereum.org/EIPS/eip-2981
+NFT overview: https://en.wikipedia.org/wiki/Non-fungible_token
